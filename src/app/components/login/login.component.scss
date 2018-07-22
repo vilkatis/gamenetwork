@@ -13,10 +13,40 @@ app-login:host {
   box-sizing: border-box;
 }
 
-form {
+section {
   background: #666;
   display: flex;
   flex:1 0 0;
   flex-direction: column;
   padding: 30px;
+}
+
+form {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.help {
+  p {
+    margin-top: 15px;
+  }
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.social {
+  a {
+    height: 35px;
+    width: 110px;
+    border-radius: 3px;
+    line-height: 35px;
+    display: block;
+    background: #111;
+    color: #FFF;
+  }
 }
