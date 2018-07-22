@@ -1,0 +1,12 @@
+app-input:host {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  height: 50px;
+  width: 100%;
+  padding-left: 45px;
+  border-radius: 3px;
+  background: #FFF;
+  box-sizing: border-box;
+}

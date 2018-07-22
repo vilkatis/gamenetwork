@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+* {margin:0;padding:0;list-style:none;outline:none;border:none;font-family:arial;vertical-align:top;text-decoration:none;font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+iframe {max-width:100%;}
+img {width:auto;max-width:100%;height:auto;}
+textarea {resize:none;}
+::-webkit-input-placeholder {color:#ccc;opacity:1;}:-moz-placeholder {color:#ccc;opacity:1;}::-moz-placeholder {color:#ccc;opacity:1;}:-ms-input-placeholder {color:#ccc;opacity:1;}
+[placeholder]:focus::-webkit-input-placeholder {opacity:0.5;}[placeholder]:focus:-moz-placeholder {opacity:0.5;}[placeholder]:focus::-moz-placeholder {opacity:0.5;}[placeholder]:focus:-ms-input-placeholder {opacity:0.5;}
+.clearfix:before, .clearfix:after {content:" ";display:table;} .clearfix:after {clear:both;} .clearfix {*zoom:1;}
+a {transition: all .2s linear;-o-transition: all .2s linear;-moz-transition: all .2s linear;-webkit-transition: all .2s linear}
+input , select {-webkit-appearance:none;border-radius:0;-webkit-border-radius:0px;}
+body {font-size:90%;cursor:default;background:#F8F7F1;}
+.wrapper {box-sizing:border-box;width:1020px;margin:0 auto;position:relative;}
+main {display:block;}
+.post-edit-link {position:absolute;top:0;right:0;}

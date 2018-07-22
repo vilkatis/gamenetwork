@@ -1,0 +1,22 @@
+app-login:host {
+  max-width: 375px;
+  width: 100%;
+  height: 80vh;
+  margin: 10vh auto;
+  text-align: center;
+  position: relative;
+  background: grey;
+  // TODO maybe change to flex
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+form {
+  background: #666;
+  display: flex;
+  flex:1 0 0;
+  flex-direction: column;
+  padding: 30px;
+}
