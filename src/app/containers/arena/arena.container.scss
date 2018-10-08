@@ -1,13 +1,15 @@
-app-feed:host {
+app-arena:host {
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
   background: white;
 }
 
-.header {
+app-footer {
   flex: 0 0 50px;
+  display: flex;
   background: var(--third-color);
+  position: relative;
 }
 
 .feed {

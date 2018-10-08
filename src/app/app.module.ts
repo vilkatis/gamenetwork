@@ -21,6 +21,9 @@ import {FeedContainer} from './containers/feed/feed.container';
 import {FooterComponent} from './components/footer/footer.component';
 import {GameContainer} from './containers/game/game.container';
 import {FeedItemComponent} from './components/feed-item/feed-item.component';
+import {ArenaContainer} from './containers/arena/arena.container';
+import {ArenaItemComponent} from './components/arena-item/arena-item.component';
+import { HeaderComponent } from './components/header/header.component';
 
 export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];
 
@@ -29,6 +32,7 @@ export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [stor
     AppComponent,
     LoginContainer,
     RegisterContainer,
+    ArenaContainer,
     FeedContainer,
     GameContainer,
     InputComponent,
@@ -36,7 +40,9 @@ export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [stor
     CheckboxComponent,
     StrikeComponent,
     FooterComponent,
-    FeedItemComponent
+    FeedItemComponent,
+    ArenaItemComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

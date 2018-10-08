@@ -1,0 +1,20 @@
+<div class="heading">
+  <div class="avatar">
+    <img [src]="avatar" alt="">
+  </div>
+  <div class="user">
+    <strong>{{username}}</strong>
+    <ng-container *ngIf="activity">
+      <span> {{activity.action}} </span>
+      <strong>{{activity.name}}</strong>
+    </ng-container>
+  </div>
+</div>
+<div class="image" *ngIf="image">
+  <img [src]="image" alt="">
+</div>
+<div class="body" *ngIf="text">{{text}}</div>
+<div class="actions">
+  <div class="half"><img src="../../../assets/star.png"></div>
+  <div class="half"><img src="../../../assets/pacman.png"></div>
+</div>
