@@ -1,4 +1,4 @@
-app-feed-item:host {
+app-arena-item:host {
   margin: 0 0 10px 0;
   display: flex;
   flex-direction: column;
@@ -14,15 +14,72 @@ app-feed-item:host {
   display: flex;
   flex: 0 0 50px;
   align-items: center;
+  justify-content: space-between;
   padding: 10px;
   box-sizing: border-box;
   background: var(--fifth-color);
   color: var(--sixth-color)
 }
 
+.badges {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #f1882e;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.badge {
+  flex: 0 0 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  span {
+    margin-bottom: 5px;
+  }
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 2px solid #111;
+  background: #f1882e;
+  color: #FFF;
+  font-weight: 900;
+  font-size: 18px;
+  text-shadow:
+    -1px -1px 2px #000,
+    1px -1px 2px #000,
+    -1px 1px 2px #000,
+    1px 1px 2px #000;
+}
+
 .avatar {
   max-width: 30px;
   margin: 0 10px 0 0;
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+}
+
+.player {
+  flex: 0 0 20%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  img {
+    border-radius: 50%;
+  }
 }
 
 
