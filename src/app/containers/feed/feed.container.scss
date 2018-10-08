@@ -2,6 +2,7 @@ app-feed:host {
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
+  background: white;
 }
 
 .header {
@@ -21,13 +22,15 @@ app-footer {
   flex: 1 0 0;
   flex-direction: column;
   min-height: min-content;
+  padding:0 10px;
+  box-sizing: border-box;
 }
 
 
 
 .feed-scroller {
   display: flex;
-  margin: 10px 0;
+  padding: 10px 0;
   box-sizing: border-box;
   flex-direction: column;
   flex: 1 0 0;

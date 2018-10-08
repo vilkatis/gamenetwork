@@ -20,8 +20,6 @@ import { reducers } from './store';
 import {FeedContainer} from './containers/feed/feed.container';
 import {FooterComponent} from './components/footer/footer.component';
 import {GameContainer} from './containers/game/game.container';
-import {AfterLoginComponent} from './containers/after-login/after-login.component';
-import {BeforeLoginComponent} from './containers/before-login/before-login.component';
 import {FeedItemComponent} from './components/feed-item/feed-item.component';
 
 export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];
@@ -29,8 +27,6 @@ export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [stor
 @NgModule({
   declarations: [
     AppComponent,
-    AfterLoginComponent,
-    BeforeLoginComponent,
     LoginContainer,
     RegisterContainer,
     FeedContainer,

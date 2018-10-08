@@ -3,6 +3,7 @@ app-feed-item:host {
   display: flex;
   flex-direction: column;
   background: var(--sixth-color);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   &:last-child {
     margin: 0;
   }
@@ -39,13 +40,13 @@ app-feed-item:host {
   text-align: center;
   background: #ccc;
   justify-content: space-between;
-  padding: 2px 0 0 0;
+  padding: 1px 0 0 0;
 }
 
 .half {
   padding: 10px;
   box-sizing: border-box;
-  width: calc(50% - 1px);
+  width: calc(50% - 0.5px);
   background: #FFF;
   display: flex;
   justify-content: center;
