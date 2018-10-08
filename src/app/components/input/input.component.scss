@@ -1,18 +1,28 @@
 app-input:host {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   margin-bottom: 15px;
   position: relative;
+  border-bottom: 1px solid var(--second-color);
 }
 label {
-  margin-bottom: 10px;
+  fill: var(--fourth-color);
+}
+.icon {
+  font-size: 1px;
+  vertical-align: middle;
+  width: 25px;
+  padding: 0 10px;
+  height: 45px;
 }
 input {
   height: 50px;
   width: 100%;
-  padding-left: 45px;
-  border-radius: 3px;
-  background: #FFF;
+  background: var(--first-color);
   box-sizing: border-box;
   font-size: 16px;
+  color: var(--sixth-color);
+  &:focus + label {
+    fill: var(--sixth-color);
+  }
 }

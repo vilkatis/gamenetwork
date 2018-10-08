@@ -1,0 +1,44 @@
+app-feed:host {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+}
+
+.header {
+  flex: 0 0 50px;
+  background: var(--third-color);
+}
+
+app-footer {
+  flex: 0 0 50px;
+  display: flex;
+  background: var(--third-color);
+  position: relative;
+}
+
+.feed {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  min-height: min-content;
+}
+
+
+
+.feed-scroller {
+  display: flex;
+  margin: 10px 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex: 1 0 0;
+  overflow: auto;
+  min-height: 0;
+}
+
+.background {
+  position: absolute;
+  width: calc(100% / 4);
+  top: 0;
+  height: 100%;
+  background: grey;
+}

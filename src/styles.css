@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --first-color: #1A1A1D;
+  --second-color: #4E4E50;
+  --third-color: #6F2232;
+  --fourth-color: #950740;
+  --fifth-color: #C3073F;
+  --sixth-color: #FFF;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,22 +37,22 @@ textarea {
 
 ::-webkit-input-placeholder {
   color: #ccc;
-  opacity: 1;
+  opacity: 0.3;
 }
 
 :-moz-placeholder {
   color: #ccc;
-  opacity: 1;
+  opacity: 0.3;
 }
 
 ::-moz-placeholder {
   color: #ccc;
-  opacity: 1;
+  opacity: 0.3;
 }
 
 :-ms-input-placeholder {
   color: #ccc;
-  opacity: 1;
+  opacity: 0.3;
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
@@ -92,7 +101,8 @@ input, select {
 body {
   font-size: 90%;
   cursor: default;
-  background: #F8F7F1;
+  color: var(--sixth-color);
+  background: var(--first-color);
 }
 
 .wrapper {
@@ -104,10 +114,4 @@ body {
 
 main {
   display: block;
-}
-
-.post-edit-link {
-  position: absolute;
-  top: 0;
-  right: 0;
 }

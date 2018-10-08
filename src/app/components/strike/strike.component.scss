@@ -1,0 +1,21 @@
+app-strike:host {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: center;
+  margin: 15px 0;
+  &:before,
+  &:after {
+    content: "";
+    flex: 1 0 0;
+    background: var(--third-color);
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+  }
+  &:before {
+    margin: 0 15px 0 0;
+  }
+  &:after {
+    margin: 0 0 0 15px;
+  }
+}

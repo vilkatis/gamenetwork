@@ -1,0 +1,25 @@
+.background {
+  position: absolute;
+  width: calc(100% / 4);
+  top: 0;
+  height: 100%;
+  background: grey;
+}
+
+.footer-icon {
+  flex: 0 0 20%;
+  background: #f1882e;
+  box-sizing: border-box;
+  &:hover,
+  &.active {
+    background: #FFF;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px;
+  img {
+    max-height: 100%;
+  }
+}

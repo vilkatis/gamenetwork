@@ -9,6 +9,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class InputComponent implements OnInit {
   @Input() public name: string;
   @Input() public type: string = 'text';
+  @Input() public icon: string = 'user';
   constructor() {
   }
 

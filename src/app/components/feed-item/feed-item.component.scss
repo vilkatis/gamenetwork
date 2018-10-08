@@ -1,0 +1,54 @@
+app-feed-item:host {
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--sixth-color);
+  &:last-child {
+    margin: 0;
+  }
+}
+
+
+.heading {
+  display: flex;
+  flex: 0 0 50px;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  background: var(--fifth-color);
+  color: var(--sixth-color)
+}
+
+.avatar {
+  max-width: 30px;
+  margin: 0 10px 0 0;
+}
+
+
+
+.body {
+  padding: 10px;
+  box-sizing: border-box;
+  color: var(--first-color);
+  background: var(--sixth-color);
+}
+
+.actions {
+  display: flex;
+  color: black;
+  text-align: center;
+  background: #ccc;
+  justify-content: space-between;
+  padding: 2px 0 0 0;
+}
+
+.half {
+  padding: 10px;
+  box-sizing: border-box;
+  width: calc(50% - 1px);
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

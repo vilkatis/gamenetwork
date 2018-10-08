@@ -1,0 +1,61 @@
+app-register:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  padding: 30px;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex:1 0 0;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: center;
+}
+
+
+form {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.help {
+  margin-top: 15px;
+  p {
+    margin-top: 15px;
+  }
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.social {
+  a {
+    height: 35px;
+    width: 110px;
+    line-height: 35px;
+    display: block;
+    background: #111;
+    color: #FFF;
+  }
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: -0.045em;
+  color: var(--sixth-color);
+  span {
+    color: var(--fifth-color);
+  }
+}
+
+a {
+  color: var(--fifth-color);
+}

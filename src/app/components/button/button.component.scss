@@ -6,8 +6,8 @@ app-button:host {
 input {
   height: 50px;
   width: 100%;
-  border-radius: 3px;
-  background: #FFF;
+  background: var(--third-color);
+  color: var(--sixth-color);
   box-sizing: border-box;
   font-size: 16px;
   cursor: pointer;
