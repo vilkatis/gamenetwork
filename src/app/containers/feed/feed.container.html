@@ -1,25 +1,10 @@
 <app-header title="My News"></app-header>
 <div class="feed-scroller">
   <div class="feed">
-    <app-feed-item username="Josh"
-                   avatar="https://randomuser.me/api/portraits/men/32.jpg"
-                   text="Just another reason why this feature is stupid. You have no actual range finding equipment but you can just alt-right clip on the crate and it will put a marker to EXACTLY where it will drop? That's a stupid joke. The same with someone that is decently hidden and only 1 person in a squad sees it. Use your comms not a mouse click that marks it exactly.">
-    </app-feed-item>
-    <app-feed-item username="Jane"
-                   avatar="https://randomuser.me/api/portraits/women/21.jpg"
-                   image="https://cdn.vox-cdn.com/thumbor/N0LYmOL6j9dY0WCh_sw1zTMzU50=/0x0:1920x1089/1200x800/filters:focal(815x67:1121x373)/cdn.vox-cdn.com/uploads/chorus_image/image/59292793/pubg.0.jpg"
-                   text="Just another reason why this feature is stupid. You have no actual range finding equipment but you can just alt-right clip on the crate and it will put a marker to EXACTLY where it will drop? That's a stupid joke. The same with someone that is decently hidden and only 1 person in a squad sees it. Use your comms not a mouse click that marks it exactly.">
-    </app-feed-item>
-    <app-feed-item username="Lena"
-                   [activity]="{name: 'PUBG', action: 'is playing'}"
-                   avatar="https://randomuser.me/api/portraits/women/20.jpg"
-                   image="https://cdn.vox-cdn.com/thumbor/N0LYmOL6j9dY0WCh_sw1zTMzU50=/0x0:1920x1089/1200x800/filters:focal(815x67:1121x373)/cdn.vox-cdn.com/uploads/chorus_image/image/59292793/pubg.0.jpg">
-    </app-feed-item>
-    <app-feed-item username="Blake"
-                   avatar="https://randomuser.me/api/portraits/men/33.jpg"
-                   image="https://cdn.vox-cdn.com/thumbor/N0LYmOL6j9dY0WCh_sw1zTMzU50=/0x0:1920x1089/1200x800/filters:focal(815x67:1121x373)/cdn.vox-cdn.com/uploads/chorus_image/image/59292793/pubg.0.jpg"
-                   text="Just another reason why this feature is stupid. You have no actual range finding equipment but you can just alt-right clip on the crate and it will put a marker to EXACTLY where it will drop? That's a stupid joke. The same with someone that is decently hidden and only 1 person in a squad sees it. Use your comms not a mouse click that marks it exactly.">
-    </app-feed-item>
+    <ng-container *ngFor="let post of posts">
+      <app-feed-item [post]="post">
+      </app-feed-item>
+    </ng-container>
   </div>
 </div>
 <app-footer></app-footer>

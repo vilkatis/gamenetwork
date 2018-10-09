@@ -1,4 +1,5 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
+import {IPost} from '../../models/post.model';
 
 @Component({
   selector: 'app-feed-item',
@@ -7,11 +8,7 @@ import {Component, ElementRef, Input, OnInit} from '@angular/core';
 })
 
 export class FeedItemComponent implements OnInit {
-  @Input() public username: string;
-  @Input() public avatar: string;
-  @Input() public activity?: { name: string, action: string };
-  @Input() public text?: string;
-  @Input() public image?: string;
+  @Input() public post: IPost;
 
   ngOnInit() {
   }

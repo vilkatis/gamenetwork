@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {IGame} from '../../models/game.model';
 
 @Component({
   selector: 'app-arena-item',
@@ -7,14 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 
 export class ArenaItemComponent implements OnInit {
-  @Input() public title: string;
-  @Input() public date: string;
-  @Input() public gameName: string;
-  @Input() public platform: string;
-  @Input() public region: string;
-  @Input() public language: string;
-  @Input() public players: {username: string, avatar: string}[];
-  @Input() public playerCount: number;
+  @Input() public game: IGame;
 
   ngOnInit() {
   }

@@ -24,7 +24,9 @@
     "@ngrx/entity": "^6.1.0",
     "@ngrx/router-store": "^6.0.1",
     "@ngrx/store": "^6.0.1",
+    "@types/faker": "^4.1.4",
     "core-js": "^2.5.4",
+    "faker": "^4.1.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

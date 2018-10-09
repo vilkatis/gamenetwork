@@ -1,19 +1,19 @@
 <div class="heading">
   <div class="avatar">
-    <img [src]="avatar" alt="">
+    <img [src]="post.user.avatar" alt="">
   </div>
   <div class="user">
-    <strong>{{username}}</strong>
-    <ng-container *ngIf="activity">
-      <span> {{activity.action}} </span>
-      <strong>{{activity.name}}</strong>
+    <strong>{{post.user.username}}</strong>
+    <ng-container *ngIf="post.activity">
+      <span> {{post.activity.action}} </span>
+      <strong>{{post.activity.name}}</strong>
     </ng-container>
   </div>
 </div>
-<div class="image" *ngIf="image">
-  <img [src]="image" alt="">
+<div class="image" *ngIf="post.image">
+  <img [src]="post.image" alt="">
 </div>
-<div class="body" *ngIf="text">{{text}}</div>
+<div class="body" *ngIf="post.text">{{post.text}}</div>
 <div class="actions">
   <div class="half"><img src="../../../assets/star.png"></div>
   <div class="half"><img src="../../../assets/pacman.png"></div>
