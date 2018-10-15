@@ -1,7 +1,8 @@
-app-feed-item:host {
+app-feed-new:host {
   margin: 0 0 10px 0;
   display: flex;
   flex-direction: column;
+  min-height: min-content;
   background: var(--sixth-color);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   &:last-child {
@@ -9,15 +10,14 @@ app-feed-item:host {
   }
 }
 
-
 .heading {
   display: flex;
   flex: 0 0 50px;
   align-items: center;
   padding: 10px;
   box-sizing: border-box;
-  background: var(--fifth-color);
-  color: var(--sixth-color)
+  color: var(--first-color);
+  margin: 10px 0;
 }
 
 .avatar {

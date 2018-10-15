@@ -1,4 +1,6 @@
-<input title="{{name}}" id="{{name}}" type="{{type}}" placeholder="{{name}}">
-<label for="{{name}}">
-  <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" [attr.xlink:href]="'#' + icon"></use></svg>
-</label>
+<ng-container [formGroup]="parentFormGroup">
+  <input title="{{name}}" id="{{name}}" type="{{type}}" placeholder="{{name}}" [formControlName]="controlName">
+  <label for="{{name}}">
+    <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" [attr.xlink:href]="'#' + icon"></use></svg>
+  </label>
+</ng-container>

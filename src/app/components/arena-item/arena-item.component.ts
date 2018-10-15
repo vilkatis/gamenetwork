@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IGame} from '../../models/game.model';
+import {IGame} from '../../models/IGame';
 
 @Component({
   selector: 'app-arena-item',

@@ -1,10 +1,10 @@
 <section>
   <h1><span>SQUAD</span>MATES</h1>
-  <form>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
     <app-button name="Login with Facebook" type="submit" background="#3B5998"></app-button>
     <app-strike text="or"></app-strike>
-    <app-input name="Username" icon="user"></app-input>
-    <app-input name="Password" type="password" icon="lock"></app-input>
+    <app-input name="Username" icon="user" controlName="username" [parentFormGroup]="formGroup"></app-input>
+    <app-input name="Password" type="password" icon="lock" controlName="password" [parentFormGroup]="formGroup"></app-input>
     <app-button name="Login" type="submit"></app-button>
   </form>
   <div class="help">

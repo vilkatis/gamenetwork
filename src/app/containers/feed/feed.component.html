@@ -1,5 +1,6 @@
 <app-header title="My News"></app-header>
 <div class="feed-scroller">
+  <app-feed-new [account]="account$ | async"></app-feed-new>
   <div class="feed">
     <ng-container *ngFor="let post of posts">
       <app-feed-item [post]="post">

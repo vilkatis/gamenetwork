@@ -1,0 +1,15 @@
+<ng-container *ngIf="account">
+  <div class="heading">
+    <div class="avatar">
+      <img [src]="account.avatar" alt="">
+    </div>
+    <div class="user">
+      What's going on <strong>{{account.username}}</strong> ?<br/>
+      Share a photo, post, or game with your fellow players.
+    </div>
+  </div>
+  <div class="actions">
+    <div class="half"><img src="../../../assets/star.png"></div>
+    <div class="half"><img src="../../../assets/pacman.png"></div>
+  </div>
+</ng-container>

@@ -1,6 +1,6 @@
 import {State} from './state.model';
-import {User} from '../../models/user.model';
+import {IAccount} from '../../models/IAccount';
 
 export interface AccountState extends State {
-  entity: User;
+  entity: IAccount;
 }

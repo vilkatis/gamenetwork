@@ -1,15 +1,14 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as Faker from 'faker';
-import {IPost} from '../../models/post.model';
-import {IGame} from '../../models/game.model';
+import { IGame } from '../../models/IGame';
 
 @Component({
   selector: 'app-arena',
-  templateUrl: 'arena.container.html',
-  styleUrls: ['arena.container.scss']
+  templateUrl: 'arena.component.html',
+  styleUrls: ['arena.component.scss']
 })
 
-export class ArenaContainer implements OnInit {
+export class ArenaComponent implements OnInit {
   public games: IGame[] = [];
 
   constructor() {
@@ -20,7 +19,7 @@ export class ArenaContainer implements OnInit {
         region: Faker.random.arrayElement(['EU', 'US', 'FR', 'ES', 'IT', 'IL']),
         language: Faker.random.arrayElement(['EN', 'FR', 'ES', 'IT', 'IL']),
         title: Faker.lorem.words(3),
-        gameName: Faker.random.arrayElement(['PUBG','Fortnite', 'CS GO', 'Overwatch', 'Destiny 2']),
+        gameName: Faker.random.arrayElement(['PUBG', 'Fortnite', 'CS GO', 'Overwatch', 'Destiny 2']),
         users: []
       };
       for (let j = 0; j < Faker.random.number(5); j++) {
