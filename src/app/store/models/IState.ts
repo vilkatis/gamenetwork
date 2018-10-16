@@ -1,4 +1,4 @@
-export interface State {
+export interface IState {
   isLoading: boolean;
   isLoaded: boolean;
 }

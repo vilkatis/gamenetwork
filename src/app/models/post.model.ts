@@ -1,4 +1,5 @@
 export interface IPost {
+  id: number;
   user: {
     username: string;
     avatar: string;

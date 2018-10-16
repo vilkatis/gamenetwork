@@ -1,13 +1,15 @@
-import {AccountState} from '../models/account-state.model';
+import {IAccountState} from '../models/IAccountState';
 import * as fromAccount from '../actions/account.actions';
+import { IAccount } from '../../models/IAccount';
+import { Selector } from '@ngrx/store';
 
-const initialState: AccountState = {
+const initialState: IAccountState = {
   entity: null,
   isLoading: false,
   isLoaded: false
 };
 
-export function reducer(state = initialState, action: fromAccount.AccountActions): AccountState {
+export function reducer(state = initialState, action: fromAccount.AccountActions): IAccountState {
   switch (action.type) {
     case (fromAccount.LOGIN_REQUEST):
       return {
@@ -32,6 +34,6 @@ export function reducer(state = initialState, action: fromAccount.AccountActions
   }
 }
 
-export const getAccountEntity = (state: AccountState) => state.entity;
-export const getAccountLoading = (state: AccountState) => state.isLoading;
-export const getAccountLoaded = (state: AccountState) => state.isLoaded;
+export const getAccountEntity: Selector<IAccountState, IAccount> = (state: IAccountState) => state.entity;
+export const getAccountLoading: Selector<IAccountState, boolean> = (state: IAccountState) => state.isLoading;
+export const getAccountLoaded: Selector<IAccountState, boolean> = (state: IAccountState) => state.isLoaded;

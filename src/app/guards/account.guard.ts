@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { CanActivate } from '@angular/router';
+import { CanActivate, CanActivateChild } from '@angular/router';
 
-import { Store } from '@ngrx/store';
-import { take, switchMap, catchError } from 'rxjs/operators';
+import { select, Store } from '@ngrx/store';
+import { catchError, switchMap, take } from 'rxjs/operators';
 
 import * as fromStore from '../store';
 import { Observable, of } from 'rxjs';
-import { State } from '../store/models/state.model';
+import { IAppState } from '../store/models/IAppState';
 
 @Injectable()
-export class AccountGuard implements CanActivate {
-  constructor(private store: Store<State>) {
+export class AccountGuard implements CanActivate, CanActivateChild {
+  constructor(private store: Store<IAppState>) {
   }
 
   canActivate(): Observable<boolean> {
@@ -21,8 +21,16 @@ export class AccountGuard implements CanActivate {
   }
 
   checkStore(): Observable<boolean> {
-    return this.store.select(fromStore.getAccountLoaded).pipe(
+    return this.store.pipe(
+      select(fromStore.getAccountLoaded),
       take(1)
+    );
+  }
+
+  canActivateChild(): Observable<boolean> {
+    return this.checkStore().pipe(
+      switchMap((value) => of(value)),
+      catchError(() => of(false))
     );
   }
 }

@@ -8,4 +8,10 @@ export class Utils {
     this.typeMap[val] = true;
     return val;
   }
+
+  public static keyBy<T>(array: T[], keyName: string): Record<string, T> {
+    return array.reduce<Record<string, T>>((obj: Record<string, T>, item: T) => {
+      return obj;
+    }, {});
+  }
 }

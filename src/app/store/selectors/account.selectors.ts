@@ -1,20 +1,22 @@
-import {createFeatureSelector, createSelector} from '@ngrx/store';
-import {AccountState} from '../models/account-state.model';
+import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
+import { IAccountState } from '../models/IAccountState';
 import * as fromAccount from '../reducers/account.reducer';
+import { IAccount } from '../../models/IAccount';
+import { IAppState } from '../models/IAppState';
 
-export const getAccountState = createFeatureSelector<AccountState>('account');
+export const getAccountState: MemoizedSelector<IAppState, IAccountState> = createFeatureSelector<IAppState, IAccountState>('account');
 
-export const getAccountEntity = createSelector(
+export const getAccountEntity: MemoizedSelector<IAppState, IAccount> = createSelector(
   getAccountState,
   fromAccount.getAccountEntity
 );
 
-export const getAccountLoaded = createSelector(
+export const getAccountLoaded: MemoizedSelector<IAppState, boolean> = createSelector(
   getAccountState,
   fromAccount.getAccountLoaded
 );
 
-export const getAccountLoading = createSelector(
+export const getAccountLoading: MemoizedSelector<IAppState, boolean> = createSelector(
   getAccountState,
   fromAccount.getAccountLoading
 );

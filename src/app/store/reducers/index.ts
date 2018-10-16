@@ -1,7 +1,9 @@
 import * as fromAccount from './account.reducer';
+import * as fromFeed from './feed.reducer';
 import {ActionReducerMap} from '@ngrx/store';
-import {AppState} from '../models/app-state.model';
+import {IAppState} from '../models/IAppState';
 
-export const reducers: ActionReducerMap<AppState> = {
-  account: fromAccount.reducer
+export const reducers: ActionReducerMap<IAppState> = {
+  account: fromAccount.reducer,
+  feed: fromFeed.reducer
 };
