@@ -11,7 +11,10 @@ export class Utils {
 
   public static keyBy<T>(array: T[], keyName: string): Record<string, T> {
     return array.reduce<Record<string, T>>((obj: Record<string, T>, item: T) => {
-      return obj;
+      return {
+        ...obj,
+        [item[keyName]]: item
+      };
     }, {});
   }
 }

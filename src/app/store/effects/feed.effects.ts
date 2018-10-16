@@ -10,7 +10,7 @@ import { Utils } from '../../classes/utils';
 @Injectable()
 export class FeedEffects {
   @Effect()
-  login$ = this._actions$
+  feed$ = this._actions$
     .pipe(
       ofType(feedActions.FEED_REQUEST),
       map(() => {
