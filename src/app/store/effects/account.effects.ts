@@ -7,6 +7,7 @@ import { map, switchMap } from 'rxjs/operators';
 import { ILoginRequest } from '../../models/ILoginRequest';
 import * as Faker from 'faker';
 import { Router } from '@angular/router';
+import { IRegisterRequest } from '../../models/IRegisterRequest';
 
 @Injectable()
 export class AccountEffects {
@@ -21,6 +22,28 @@ export class AccountEffects {
         return [
           new feedActions.FeedRequest(),
           new accountActions.LoginSuccess(
+            {
+              username: request.username,
+              firstName: Faker.name.firstName(),
+              lastName: Faker.name.lastName(),
+              avatar: Faker.internet.avatar()
+            }
+          )
+        ];
+      })
+    );
+
+  @Effect()
+  register$ = this._actions$
+    .pipe(
+      ofType(accountActions.REGISTER_REQUEST),
+      map((action: accountActions.RegisterRequest) => action.payload),
+      switchMap((request: IRegisterRequest) => {
+        Faker.seed(1000);
+        this._router.navigateByUrl('account/feed');
+        return [
+          new feedActions.FeedRequest(),
+          new accountActions.RegisterSuccess(
             {
               username: request.username,
               firstName: Faker.name.firstName(),

@@ -12,11 +12,13 @@ const initialState: IAccountState = {
 export function reducer(state = initialState, action: fromAccount.AccountActions): IAccountState {
   switch (action.type) {
     case (fromAccount.LOGIN_REQUEST):
+    case (fromAccount.REGISTER_REQUEST):
       return {
         ...state,
         isLoading: true
       };
       case (fromAccount.LOGIN_SUCCESS):
+      case (fromAccount.REGISTER_SUCCESS):
         return {
           ...state,
           entity: action.payload,
@@ -24,6 +26,7 @@ export function reducer(state = initialState, action: fromAccount.AccountActions
           isLoaded: true
         };
     case (fromAccount.LOGIN_FAILURE):
+    case (fromAccount.REGISTER_FAILURE):
       return {
         ...state,
         isLoading: false

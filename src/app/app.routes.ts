@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { ArenaComponent, FeedComponent, HomeComponent, LoginComponent, RegisterComponent } from './containers';
+import { ArenaComponent, FeedComponent, HomeComponent, LandingComponent, LoginComponent, RegisterComponent } from './containers';
 
 import { AccountGuard } from './guards';
 
 export const ROUTES: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: LandingComponent,
     children: [
       {path: '', redirectTo: 'login', pathMatch: 'full'},
       {path: 'login', component: LoginComponent},
