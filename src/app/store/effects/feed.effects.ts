@@ -28,7 +28,7 @@ export class FeedEffects {
             },
             activity: hasActivity ? {
               action: 'is playing',
-              name: Faker.lorem.word()
+              name: Faker.random.arrayElement(['PUBG', 'Fortnite', 'CS GO', 'Overwatch', 'Destiny 2'])
             } : null,
             text: hasText ? Faker.lorem.paragraph() : null,
             image: hasImage ? `https://picsum.photos/600/300?image=${Faker.random.number(100)}` : null
