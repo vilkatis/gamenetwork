@@ -16,7 +16,7 @@ export class FeedComponent {
   public feed$: Observable<IPost[]>;
   public account$: Observable<IAccount>;
 
-  constructor(private _store: Store<IAppState>) {
+  public constructor(private _store: Store<IAppState>) {
     this.account$ = _store.pipe(select(fromStore.getAccountEntity));
     this.feed$ = _store.pipe(select(fromStore.getAllFeed));
   }

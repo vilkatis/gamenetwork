@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as fromGuards from './guards';
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];
 
@@ -22,6 +23,7 @@ export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [stor
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(ROUTES, {
