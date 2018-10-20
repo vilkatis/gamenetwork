@@ -45,6 +45,6 @@ export function reducer(state = initialState, action: fromSessions.SessionsActio
   }
 }
 
-export const getGameEntities: Selector<ISessionsState, Record<string, ISession>> = (state: ISessionsState) => state.entities;
-export const getGamesLoading: Selector<ISessionsState, boolean> = (state: ISessionsState) => state.isLoading;
-export const getGamesLoaded: Selector<ISessionsState, boolean> = (state: ISessionsState) => state.isLoaded;
+export const getSessionEntities: Selector<ISessionsState, Record<string, ISession>> = (state: ISessionsState) => state.entities;
+export const getSessionsLoading: Selector<ISessionsState, boolean> = (state: ISessionsState) => state.isLoading;
+export const getSessionsLoaded: Selector<ISessionsState, boolean> = (state: ISessionsState) => state.isLoaded;

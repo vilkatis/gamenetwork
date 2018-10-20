@@ -1,0 +1,19 @@
+<ng-container *ngIf="game$ | async; let game">
+  <app-header [title]="game.name"></app-header>
+  <img [src]="game.image" alt="">
+  <div class="heading">
+    <div class="avatar">
+      <img [src]="game.avatar" alt="">
+    </div>
+    <div class="user">
+      <strong>{{game.name}}</strong><br/>
+      Video Game
+    </div>
+  </div>
+  <div class="feed-scroller">
+    <div class="feed">
+    </div>
+  </div>
+  <app-footer></app-footer>
+
+</ng-container>

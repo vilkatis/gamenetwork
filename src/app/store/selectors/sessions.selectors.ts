@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import * as fromGames from '../reducers/sessions.reducer';
+import * as fromSessions from '../reducers/sessions.reducer';
 import { IAppState } from '../models/IAppState';
 import { ISessionsState } from '../models/ISessionsState';
 import { ISession } from '../../models/ISession';
@@ -8,7 +8,7 @@ export const getSessionsState: MemoizedSelector<IAppState, ISessionsState> = cre
 
 export const getSessionEntities: MemoizedSelector<IAppState, Record<string, ISession>> = createSelector(
   getSessionsState,
-  fromGames.getGameEntities
+  fromSessions.getSessionEntities
 );
 
 export const getAllSessions: MemoizedSelector<IAppState, ISession[]> = createSelector(
@@ -20,10 +20,10 @@ export const getAllSessions: MemoizedSelector<IAppState, ISession[]> = createSel
 
 export const getSessionsLoaded: MemoizedSelector<IAppState, boolean> = createSelector(
   getSessionsState,
-  fromGames.getGamesLoaded
+  fromSessions.getSessionsLoaded
 );
 
 export const getSessionsLoading: MemoizedSelector<IAppState, boolean> = createSelector(
   getSessionsState,
-  fromGames.getGamesLoading
+  fromSessions.getSessionsLoading
 );

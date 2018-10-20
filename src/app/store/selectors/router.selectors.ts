@@ -7,5 +7,5 @@ export const selectRouterState =
 
 export const selectRouteParameters = createSelector(
   selectRouterState,
-  router => router.state.root.firstChild.params
+  router => router.state.root.firstChild.firstChild.params
 );
