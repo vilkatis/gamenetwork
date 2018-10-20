@@ -1,4 +1,4 @@
-app-arena:host {
+app-sessions:host {
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
@@ -31,12 +31,4 @@ app-footer {
   flex: 1 0 0;
   overflow: auto;
   min-height: 0;
-}
-
-.background {
-  position: absolute;
-  width: calc(100% / 4);
-  top: 0;
-  height: 100%;
-  background: grey;
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IPost } from '../../models/post.model';
+import { IPost } from '../../models/IPost';
 import { IAccount } from '../../models/IAccount';
 import * as fromStore from '../../store';
 import { select, Store } from '@ngrx/store';

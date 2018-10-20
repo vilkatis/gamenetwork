@@ -1,7 +1,7 @@
 import * as fromFeed from '../actions/feed.actions';
 import { IFeedState } from '../models/IFeedState';
 import { Selector } from '@ngrx/store';
-import { IPost } from '../../models/post.model';
+import { IPost } from '../../models/IPost';
 
 const initialState: IFeedState = {
   entities: null,

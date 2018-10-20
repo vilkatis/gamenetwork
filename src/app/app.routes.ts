@@ -1,7 +1,16 @@
 import { Routes } from '@angular/router';
-import { ArenaComponent, FeedComponent, HomeComponent, LandingComponent, LoginComponent, RegisterComponent } from './containers';
+import {
+  SessionsComponent,
+  FeedComponent,
+  HomeComponent,
+  LandingComponent,
+  LoginComponent,
+  RegisterComponent,
+  GameComponent
+} from './containers';
 
 import { AccountGuard } from './guards';
+import { NewSessionComponent } from './containers/new-session/new-session.component';
 
 export const ROUTES: Routes = [
   {
@@ -18,11 +27,12 @@ export const ROUTES: Routes = [
     component: HomeComponent,
     canActivateChild: [AccountGuard],
     children: [
-      {path: 'arena', component: ArenaComponent},
-      {path: 'link2', component: FeedComponent},
-      {path: 'link3', component: FeedComponent},
-      {path: 'link4', component: FeedComponent},
-      {path: 'feed', component: FeedComponent}
+      {path: '', component: FeedComponent},
+      {path: 'feed', component: FeedComponent},
+      {path: 'sessions', component: SessionsComponent},
+      {path: 'new-session', component: NewSessionComponent},
+      {path: 'game/:id', component: GameComponent},
+      {path: 'link4', component: FeedComponent}
     ]
   }
 ];

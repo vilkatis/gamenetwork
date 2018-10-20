@@ -16,6 +16,18 @@ import * as fromGuards from './guards';
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatDatepickerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatMenuModule,
+  MatNativeDateModule,
+  MatOptionModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSlideToggleModule, MatToolbarModule
+} from '@angular/material';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];
 
@@ -26,11 +38,26 @@ export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [stor
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatSlideToggleModule,
+    NgxMaterialTimepickerModule.forRoot(),
     RouterModule.forRoot(ROUTES, {
       useHash: true,
       preloadingStrategy: PreloadAllModules
     }),
     StoreModule.forRoot(reducers, {metaReducers: META_REDUCERS}),
+    StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot(effects),
     environment.production ? [] : StoreDevtoolsModule.instrument()
   ],

@@ -10,6 +10,8 @@ import { IAppState } from '../../store/models/IAppState';
 })
 export class HeaderComponent {
   @Input() public title: string;
+  @Input() public hasLeftButton: boolean;
+  @Input() public hasRightButton: boolean = true;
 
   public constructor(private _store: Store<IAppState>) {
   }

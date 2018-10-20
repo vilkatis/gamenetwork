@@ -2,7 +2,7 @@ import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/s
 import * as fromFeed from '../reducers/feed.reducer';
 import { IAppState } from '../models/IAppState';
 import { IFeedState } from '../models/IFeedState';
-import { IPost } from '../../models/post.model';
+import { IPost } from '../../models/IPost';
 
 export const getFeedState: MemoizedSelector<IAppState, IFeedState> = createFeatureSelector<IAppState, IFeedState>('feed');
 

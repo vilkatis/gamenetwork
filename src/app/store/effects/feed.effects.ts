@@ -4,7 +4,7 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import * as feedActions from '../actions/feed.actions';
 import { map } from 'rxjs/operators';
 import * as Faker from 'faker';
-import { IPost } from '../../models/post.model';
+import { IPost } from '../../models/IPost';
 import { Utils } from '../../classes/utils';
 
 @Injectable()

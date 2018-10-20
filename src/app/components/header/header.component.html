@@ -1,3 +1,11 @@
-<img src="../../../assets/png64/034-plus.png" alt="">
+<div>
+  <ng-container *ngIf="hasLeftButton">
+    <img src="../../../assets/png64/034-plus.png" alt="">
+  </ng-container>
+</div>
 {{title}}
-<img src="../../../assets/png64/030-setting.png" alt="" (click)="onClick()">
+<div>
+  <ng-container *ngIf="hasRightButton">
+    <img src="../../../assets/png64/030-setting.png" alt="" (click)="onClick()">
+  </ng-container>
+</div>

@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { IPost } from '../../models/post.model';
+import { IPost } from '../../models/IPost';
 
 export const FEED_REQUEST = '[ACCOUNT] FEED REQUEST';
 export const FEED_SUCCESS = '[ACCOUNT] FEED SUCCESS';

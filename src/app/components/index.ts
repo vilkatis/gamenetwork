@@ -1,4 +1,4 @@
-import { ArenaItemComponent } from './arena-item/arena-item.component';
+import { GameItemComponent } from './game-item/game-item.component';
 import { ButtonComponent } from './button/button.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { FeedItemComponent } from './feed-item/feed-item.component';
@@ -9,7 +9,7 @@ import { InputComponent } from './input/input.component';
 import { StrikeComponent } from './strike/strike.component';
 
 export const components: any[] = [
-  ArenaItemComponent,
+  GameItemComponent,
   ButtonComponent,
   CheckboxComponent,
   FeedItemComponent,
@@ -20,7 +20,7 @@ export const components: any[] = [
   StrikeComponent
 ];
 
-export * from './arena-item/arena-item.component';
+export * from './game-item/game-item.component';
 export * from './button/button.component';
 export * from './checkbox/checkbox.component';
 export * from './feed-item/feed-item.component';

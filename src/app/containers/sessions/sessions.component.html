@@ -1,7 +1,7 @@
 <app-header title="Game Arena"></app-header>
 <div class="feed-scroller">
   <div class="feed">
-    <ng-container *ngFor="let game of games">
+    <ng-container *ngFor="let game of games$ | async">
       <app-arena-item [game]="game">
       </app-arena-item>
     </ng-container>

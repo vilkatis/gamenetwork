@@ -1,0 +1,53 @@
+<app-header title="New Game"></app-header>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <mat-form-field class="demo-full-width">
+    <input formControlName="title" matInput placeholder="Game session title">
+  </mat-form-field>
+  <mat-form-field class="demo-full-width">
+    <input formControlName="date" matInput [matDatepicker]="picker" placeholder="Game session date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi="true" #picker></mat-datepicker>
+  </mat-form-field>
+  <input formControlName="time" placeholder="Time" type="time">
+  <mat-form-field>
+    <mat-select formControlName="platform" placeholder="Platform">
+      <mat-option>-- Select Any --</mat-option>
+      <mat-option value="PC">PC</mat-option>
+      <mat-option value="XBOX">XBOX</mat-option>
+      <mat-option value="PS4">PS4</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select formControlName="language" placeholder="Language">
+      <mat-option>-- Select Any --</mat-option>
+      <mat-option value="EN">English</mat-option>
+      <mat-option value="FR">French</mat-option>
+      <mat-option value="ES">Spanish</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select formControlName="region" placeholder="Region">
+      <mat-option>-- Select Any --</mat-option>
+      <mat-option value="US">USA</mat-option>
+      <mat-option value="EU">Europe</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select formControlName="gameName" placeholder="Game">
+      <mat-option>-- Select Any --</mat-option>
+      <mat-option value="Destiny 2">Destiny 2</mat-option>
+      <mat-option value="PUBG">PUBG</mat-option>
+      <mat-option value="Battlefield 5">Battlefield 5</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select formControlName="users" placeholder="Players" multiple>
+      <mat-option>-- Select up to 5 --</mat-option>
+      <ng-container *ngFor="let user of (account$ | async).friends">
+        <mat-option [value]="user"><img [src]="user.avatar" alt="" style="max-width: 32px;border-radius: 50%;">{{user.username}}</mat-option>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
+  <app-button name="Create" type="submit"></app-button>
+</form>
+<app-footer></app-footer>

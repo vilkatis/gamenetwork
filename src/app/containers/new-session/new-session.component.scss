@@ -1,4 +1,4 @@
-app-feed:host {
+app-new-game:host {
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
@@ -10,23 +10,13 @@ app-feed:host {
   background: var(--third-color);
 }
 
-.feed {
+form {
   display: flex;
-  flex: 1 0 0;
-  flex-direction: column;
-  min-height: min-content;
-  padding:0 10px;
-  box-sizing: border-box;
-}
-
-
-
-.feed-scroller {
-  display: flex;
-  padding: 10px 0;
+  padding: 10px 20px;
   box-sizing: border-box;
   flex-direction: column;
   flex: 1 0 0;
   overflow: auto;
   min-height: 0;
+  color: black;
 }

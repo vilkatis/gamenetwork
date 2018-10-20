@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +6,5 @@ import {Component, ElementRef, OnInit} from '@angular/core';
   styleUrls: ['footer.component.scss']
 })
 
-export class FooterComponent implements OnInit {
-  constructor(elementRef: ElementRef) {
-  }
-
-  ngOnInit() {
-  }
+export class FooterComponent {
 }

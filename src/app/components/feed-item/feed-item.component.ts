@@ -1,5 +1,5 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
-import {IPost} from '../../models/post.model';
+import {IPost} from '../../models/IPost';
 
 @Component({
   selector: 'app-feed-item',
