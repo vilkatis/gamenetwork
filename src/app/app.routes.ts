@@ -6,7 +6,7 @@ import {
   LandingComponent,
   LoginComponent,
   RegisterComponent,
-  GameComponent
+  GameComponent, ChatComponent, ScheduleComponent
 } from './containers';
 
 import { AccountGuard } from './guards';
@@ -32,7 +32,8 @@ export const ROUTES: Routes = [
       {path: 'sessions', component: SessionsComponent},
       {path: 'new-session', component: NewSessionComponent},
       {path: 'game/:id', component: GameComponent},
-      {path: 'link4', component: FeedComponent}
+      {path: 'schedule', component: ScheduleComponent},
+      {path: 'chat', component: ChatComponent}
     ]
   }
 ];

@@ -1,2 +1,10 @@
 <router-outlet></router-outlet>
-<div *ngIf="isSettingsOpen$ | async" class="settings" [@slideInOut]></div>
+<div *ngIf="isSettingsOpen$ | async" class="settings" [@slideInOut]>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <mat-icon (click)="close()">close</mat-icon>
+      <span style="margin: 0 auto;">Settings</span>
+      <mat-icon></mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

@@ -6,6 +6,8 @@ import { LandingComponent } from './landing/landing.component';
 import { HomeComponent } from './home/home.component';
 import { NewSessionComponent } from './new-session/new-session.component';
 import { GameComponent } from './game/game.component';
+import { ChatComponent } from './chat/chat.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 export const containers: any[] = [
   SessionsComponent,
@@ -16,7 +18,9 @@ export const containers: any[] = [
   LoginComponent,
   RegisterComponent,
   LandingComponent,
-  HomeComponent
+  HomeComponent,
+  ChatComponent,
+  ScheduleComponent
 ];
 
 export * from './sessions/sessions.component';
@@ -27,3 +31,5 @@ export * from './register/register.component';
 export * from './landing/landing.component';
 export * from './home/home.component';
 export * from './game/game.component';
+export * from './chat/chat.component';
+export * from './schedule/schedule.component';

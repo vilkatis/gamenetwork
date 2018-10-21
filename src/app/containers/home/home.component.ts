@@ -28,4 +28,8 @@ export class HomeComponent {
   public constructor(private _store: Store<IAppState>) {
     this.isSettingsOpen$ = _store.pipe(select(fromStore.getIsSettingsOpen));
   }
+
+  public close() {
+    this._store.dispatch(new fromStore.CloseSettings());
+  }
 }

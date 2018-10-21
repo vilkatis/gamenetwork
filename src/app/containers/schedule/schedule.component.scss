@@ -1,0 +1,30 @@
+app-schedule:host {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  background: white;
+}
+
+.header {
+  flex: 0 0 50px;
+  background: var(--third-color);
+}
+
+.feed {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  min-height: min-content;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.feed-scroller {
+  display: flex;
+  padding: 10px 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex: 1 0 0;
+  overflow: auto;
+  min-height: 0;
+}

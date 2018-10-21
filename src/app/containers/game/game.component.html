@@ -1,17 +1,47 @@
 <ng-container *ngIf="game$ | async; let game">
   <app-header [title]="game.name"></app-header>
-  <img [src]="game.image" alt="">
-  <div class="heading">
-    <div class="avatar">
-      <img [src]="game.avatar" alt="">
+  <div class="game-scroller">
+
+    <img [src]="game.image" alt="">
+    <div class="heading">
+      <div class="avatar">
+        <img [src]="game.avatar" alt="">
+      </div>
+      <div class="user">
+        <strong>{{game.name}}</strong><br/>
+        Video Game
+      </div>
     </div>
-    <div class="user">
-      <strong>{{game.name}}</strong><br/>
-      Video Game
-    </div>
-  </div>
-  <div class="feed-scroller">
     <div class="feed">
+      <div class="data">
+        <div class="col4">
+          <strong>Developer</strong>
+          {{game.developer}}
+        </div>
+        <div class="col4">
+          <strong>Publisher</strong>
+          {{game.publisher}}
+        </div>
+        <div class="col4">
+          <strong>Release Date</strong>
+          {{game.releaseDate}}
+        </div>
+      </div>
+      <div class="data">
+        <div class="col6">
+          <strong>Genre</strong>
+          {{game.genre}}
+        </div>
+        <div class="col6">
+          <strong>Platforms</strong>
+          {{game.platforms}}
+        </div>
+      </div>
+      <div class="data">
+        <div class="col12">
+          <p [innerHtml]="game.description"></p>
+        </div>
+      </div>
     </div>
   </div>
   <app-footer></app-footer>

@@ -19,14 +19,37 @@ app-game:host {
   box-sizing: border-box;
 }
 
-.feed-scroller {
+.game-scroller {
   display: flex;
-  padding: 10px 0;
+  padding: 0 0 10px 0;
   box-sizing: border-box;
   flex-direction: column;
   flex: 1 0 0;
   overflow: auto;
   min-height: 0;
+  color: black;
+}
+
+.data {
+  display: flex;
+}
+
+.col6 {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+}
+
+.col4 {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 33%;
+}
+
+.col12 {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
 }
 
 .heading {
@@ -35,7 +58,6 @@ app-game:host {
   align-items: center;
   padding: 10px;
   box-sizing: border-box;
-  color: black;
 }
 
 .avatar {
