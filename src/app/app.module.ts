@@ -6,7 +6,9 @@ import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { MetaReducer, StoreModule } from '@ngrx/store';
 import { environment } from '../environments/environment';
+import { storeFreeze } from 'ngrx-store-freeze';
 import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { effects, reducers } from './store';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -27,7 +29,7 @@ import {
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
-export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [] : [];
+export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];
 
 
 @NgModule({
@@ -57,7 +59,7 @@ export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [] : 
     StoreModule.forRoot(reducers, {metaReducers: META_REDUCERS}),
     StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot(effects),
-    environment.production ? [] : []
+    environment.production ? [] : StoreDevtoolsModule.instrument()
   ],
   providers: [...fromGuards.guards],
   declarations: [
