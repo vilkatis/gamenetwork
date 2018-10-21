@@ -43,7 +43,9 @@
     "path": "^0.12.7",
     "rxjs": "^6.3.3",
     "typescript": "~2.9.2",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@ngrx/store-devtools": "^6.1.0",
+    "ngrx-store-freeze": "^0.2.4"
   },
   "devDependencies": {
     "@ngrx/store-devtools": "^6.1.0",
