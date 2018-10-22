@@ -1,8 +1,8 @@
 //Install express server
-const express = require('express');
-const path = require('path');
+var express = require('express');
+var path = require('path');
 
-const app = express();
+var app = express();
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/game-social-network'));
@@ -15,3 +15,4 @@ app.get('/*', function (req, res) {
 // Start the app by listening on the default Heroku port
 app.listen(4200);
 console.log('listening on port');
+
