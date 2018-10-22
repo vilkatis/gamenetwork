@@ -1,0 +1,9 @@
+<strong>{{title}}</strong>
+<ion-range-slider #sliderElement
+                  type="double"
+                  [min]="start.format('x')"
+                  [max]="end.format('x')"
+                  [step]="1800000"
+                  [grid]="true"
+                  [prettify]="prettify"
+                  decorate_both="false"></ion-range-slider>

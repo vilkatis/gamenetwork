@@ -5,5 +5,13 @@
       <span style="margin: 0 auto;">Online now</span>
     </mat-toolbar-row>
   </mat-toolbar>
+  <mat-list>
+    <mat-list-item *ngFor="let user of (account$ | async).friends">
+      <img matListAvatar [src]="user.avatar">
+      <p matLine>
+        <span>{{user.username}}</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
 </div>
 <app-footer></app-footer>

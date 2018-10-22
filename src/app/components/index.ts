@@ -7,9 +7,11 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { InputComponent } from './input/input.component';
 import { StrikeComponent } from './strike/strike.component';
+import { HoursComponent } from './hours/hours.component';
 
 export const components: any[] = [
   GameItemComponent,
+  HoursComponent,
   ButtonComponent,
   CheckboxComponent,
   FeedItemComponent,
@@ -29,3 +31,4 @@ export * from './footer/footer.component';
 export * from './header/header.component';
 export * from './input/input.component';
 export * from './strike/strike.component';
+export * from './hours/hours.component';

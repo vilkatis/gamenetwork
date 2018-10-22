@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
   MatCardModule,
-  MatDatepickerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatMenuModule,
+  MatDatepickerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule,
   MatNativeDateModule,
   MatOptionModule,
   MatRadioModule,
@@ -28,6 +28,7 @@ import {
 } from '@angular/material';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { IonRangeSliderModule } from 'ng2-ion-range-slider';
 
 export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];
 
@@ -50,7 +51,9 @@ export const META_REDUCERS: MetaReducer<any>[] = !environment.production ? [stor
     MatRadioModule,
     MatSelectModule,
     MatOptionModule,
+    MatListModule,
     MatSlideToggleModule,
+    IonRangeSliderModule,
     NgxMaterialTimepickerModule.forRoot(),
     RouterModule.forRoot(ROUTES, {
       useHash: true,
